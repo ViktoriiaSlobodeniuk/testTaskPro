@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html --open",
-    "build": "parcel build index.html --out-dir=build"
+    "build": "babel src --out-dir lib --copy-files"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.2",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
